@@ -1,0 +1,33 @@
+{% extends "mytemplate.html"%}
+
+{% block bodycontent%}
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/newuser">Register</a>
+      <a class="active" href="/login">Login</a>
+    </div>
+<div class="h2">
+    <h2>Login Here</h2>
+</div>
+    <form action="/validate" method="post">
+  <div class="login">
+        <label><b>User Name
+        </b>
+        </label>
+        <input type="text" name="uname" id="uname" placeholder="Username"  required/>
+        <br><br>
+        <label><b>Password
+        </b>
+        </label>
+        <input type="Password" name="pw" id="pw" placeholder="Password" required>
+        <br><br>
+
+       <input type="submit" name="log" id="log" value="Click Here To Login">
+        <br><br>
+        <div class="a">
+            <a href="/newuser">New User? Register Here</a>
+        </div>
+  </div>
+</form>
+{% endblock %}

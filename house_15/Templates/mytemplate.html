@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Home|HPP</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body background="static/image/bg_house.jpg" style="background-size: cover;">
+    <table>
+      <tr>
+        <td>
+          <img src="static/image/logo_house.png"  width="50">
+        </td>
+        <td>
+          <h1> House  Price Predictor</h1>
+        </td>
+      </tr>
+    </table>
+
+ <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/newuser">Register</a>
+      <a href="/newhouse">New House</a>
+      <a href="/customer">Customer</a>
+      {% if session.username : %}
+          <a href="/logout">Logout</a>
+     {% else : %}
+          <a href="/login">Login</a>
+      {% endif %}
+ </div>
+{% block bodycontent%}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% extends "mytemplate.html"%}
+
+{% block bodycontent%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/newstyle.css') }}">
+  <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/newuser">Register</a>
+      <a href="/login">Login</a>
+      <a class="active" href="/newhouse">New House</a>
+      <a  href="/customer">Customer</a>
+    </div>
+
+    <form action="/newhouse" method="post">
+    <div class="nhouse">
+         <div class="h2">
+       <h2>New House</h2>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <label><b>Customer Name</b></label>
+                    <input type="text" name="cname" id="cname" placeholder="Customer Name"  required/>
+                    <br><br>
+                </td>
+             <td>
+                 <label><b>Customer Contact</b></label>
+                 <input type="text" name="ccontact" id="ccontact" placeholder="Customer Contact" required/>
+                 <br><br>
+             </td>
+            </tr>
+            <tr>
+            <td>
+                 <label><b>Area</b></label>
+                 <input type="text" name="area" id="area" placeholder="Area" required/>
+                 <br><br>
+             </td>
+            <td>
+                 <label><b>Address</b></label>
+                 <input type="text" name="address" id="address" placeholder="Address" required/>
+                 <br><br>
+             </td>
+             </tr>
+            <tr>
+                <td>
+                 <label><b>Avg.Area Income</b></label>
+                 <input type="number" name="aareaincome" id="aareaincome" placeholder="Avg.Area Income" required/>
+                 <br><br>
+             </td>
+               <td>
+                <label><b>Avg.Area House Age</b></label>
+             <input type="number" name="ahouseage" id="ahouseage"  placeholder="Avg.Area House Age" required/>
+                <br><br>
+            </td>
+            </tr>
+        <tr>
+            <td><label><b>Avg.Area Number Of Rooms</b></label>
+                <input type="number" name="anumberofrooms" id="anumberofrooms"  placeholder="Avg.Area Number Of Rooms" required/>
+            </td>
+          <td>
+                <label><b>Avg.Area Number Of Bedrooms</b></label>
+        <input type="number" name="anumberofbedrooms" id="anumberofbedrooms"  placeholder="Avg.Area Number Of Bedrooms" required/>
+            </td>
+        </tr>
+            <tr>
+                <td>
+                 <label><b>Area population</b></label>
+          <input type="number" name="apopulation" id="apopulation"  placeholder="Area population" required/>
+                </td>
+             <td>
+                 <label><b>Price</b></label>
+          <input type="number" name="price" id="price"  placeholder="Price" required/>
+             </td>
+            </tr>
+            <tr>
+             <td>
+                 <label><b>Remarks</b></label>
+             <input type="text" name="remarks" id="remarks" placeholder="Remarks" required/>
+            </td>
+            </tr>
+        </table>
+        <center><input type="submit" name="log" id="log" value="Submit"></center>
+    </div>
+</form>
+{% endblock %}

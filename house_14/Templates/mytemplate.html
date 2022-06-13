@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Home|HPP</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body background="static/image/bg_house.jpg" style="background-size: cover;">
+    <table>
+      <tr>
+        <td>
+          <img src="static/image/logo_house.png"  width="50">
+        </td>
+        <td>
+          <h1> House  Price Predictor</h1>
+        </td>
+      </tr>
+    </table>
+
+{% block bodycontent%}
+{% endblock %}
+
+</body>
+</html>
